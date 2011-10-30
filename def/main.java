@@ -44,7 +44,7 @@ public class main extends Applet implements Runnable
 		World = new world();
 		IS = new ImageStorer();
 		UserView = new userview(0, 0);
-		Player = new player(416, 416);
+		Player = new player(352, 320);
 		Physics = new physics();
 		Block = new block();
 		PK = new PressedKeys();
@@ -54,7 +54,7 @@ public class main extends Applet implements Runnable
 		light = new Light();
 		
 		frame = new JFrame("Crinemaft 1.0.0");
-		frame.setSize(900, 900);
+		frame.setSize(750, 750);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		this.setBackground(Color.BLACK);

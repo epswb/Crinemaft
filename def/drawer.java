@@ -30,7 +30,7 @@ public class drawer
 			verschiebungY += 32;
 		}
 		
-		if (main.Player.blockposX <= 13)
+		if (main.Player.blockposX <= 11)
 		{
 			if (verschiebungX <= 0)
 			{
@@ -48,17 +48,17 @@ public class drawer
 			}
 		}
 		
-		for (int i = 0; i < 30; i++)
+		for (int i = 0; i < 24; i++)
 		{
-			for (int o = 0; o < 29; o++)
+			for (int o = 0; o < 24; o++)
 			{
 				g.drawImage(Block.getBlock(block.sky()), (i)*32 - verschiebungX, (o)*32 - verschiebungY, 32, 32, null);
 			}
 		}
 		
-		for (int i = -1; i < 29; i++)
+		for (int i = -1; i < 24; i++)
 		{
-			for (int o = -1; o < 28; o++)
+			for (int o = -1; o < 24; o++)
 			{
 				if (o+userviewY < 0)
 				{
@@ -91,9 +91,9 @@ public class drawer
 			}
 		}
 		
-		for (int i = 0; i < 29; i++)
+		for (int i = 0; i < 24; i++)
 		{
-			for (int o = 0; o < 28; o++)
+			for (int o = 0; o < 24; o++)
 			{
 				if (userviewX + i >= 0 && userviewY + o >= 0 && userviewX + i <= 999 && userviewY + o <= 99 && main.World.get(i + userviewX, o + userviewY) != block.sky() && main.World.get(i + userviewX, o + userviewY) != block.dungeon() && main.World.get(i + userviewX, o + userviewY) != block.flower())
 				{

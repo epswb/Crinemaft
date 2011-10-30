@@ -7,7 +7,7 @@ class player
 	public int posX, posY, WalkState = 0;
 	public boolean WalkingLeft = false;
 	public int actualImg = 0;
-	public float blockposX = 13, blockposY = 16;
+	public float blockposX = 11, blockposY = 13;
 	public int armstate = 0;
 	public int leben = 10;
 	
