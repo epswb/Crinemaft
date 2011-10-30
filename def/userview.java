@@ -1,7 +1,8 @@
+package def;
 
 
 
-class userview
+public class userview
 {
 	float X = 0, Y = 0;
 	

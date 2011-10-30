@@ -1,7 +1,12 @@
+package light;
+
+import def.block;
+import def.main;
+
 import java.awt.Color;
 import java.awt.Graphics;
 
-class Light
+public class Light
 {
 	public Light()
 	{

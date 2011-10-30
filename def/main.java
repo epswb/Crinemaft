@@ -1,3 +1,5 @@
+package def;
+
 import java.applet.Applet;
 import java.awt.Color;
 import java.awt.Graphics;
@@ -9,27 +11,30 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.awt.event.MouseWheelEvent;
 import java.awt.event.MouseWheelListener;
-
 import javax.swing.JFrame;
+import light.Light;
 
 
-class main extends Applet implements Runnable
+public class main extends Applet implements Runnable
 {
 	
 	Image bufImage;
 	Graphics bufG;
-	static drawer Drawer;
-	static world World;
-	static ImageStorer IS;
-	static userview UserView;
-	static player Player;
-	static physics Physics;
-	static block Block;
-	static PressedKeys PK;
-	static MiningHandler mininghandler;
-	static HUD hud;
-	static Inventory inv;
-	JFrame frame;
+	public static drawer Drawer;
+	public static world World;
+	public static ImageStorer IS;
+	public static userview UserView;
+	public static player Player;
+	public static physics Physics;
+	public static block Block;
+	public static PressedKeys PK;
+	public static MiningHandler mininghandler;
+	public static HUD hud;
+	public static Inventory inv;
+	public static Light light;
+	
+	
+	public JFrame frame;
 	
 	
 	public main()
@@ -46,6 +51,7 @@ class main extends Applet implements Runnable
 		hud = new HUD();
 		mininghandler = new MiningHandler();
 		inv = new Inventory();
+		light = new Light();
 		
 		frame = new JFrame("Crinemaft 1.0.0");
 		frame.setSize(900, 900);
@@ -122,6 +128,7 @@ class main extends Applet implements Runnable
 	{
 		Drawer.draw(g);
 		hud.drawHUD(g);
+		light.manageLight(g);
 	}
 	
 	public void update (Graphics g)

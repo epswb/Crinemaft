@@ -1,3 +1,4 @@
+package def;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -7,7 +8,8 @@ public class drawer
 {
 	
 	block Block;
-	int verschiebungX, verschiebungY;
+	public int verschiebungX;
+	public int verschiebungY;
 	public drawer()
 	{
 		Block = new block();
