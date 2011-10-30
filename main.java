@@ -18,7 +18,7 @@ class main extends Applet implements Runnable
 	
 	Image bufImage;
 	Graphics bufG;
-	drawer Drawer;
+	static drawer Drawer;
 	static world World;
 	static ImageStorer IS;
 	static userview UserView;

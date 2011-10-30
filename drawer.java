@@ -7,7 +7,7 @@ public class drawer
 {
 	
 	block Block;
-	
+	int verschiebungX, verschiebungY;
 	public drawer()
 	{
 		Block = new block();
@@ -18,8 +18,8 @@ public class drawer
 		int[][] world = main.World.getWorld();
 		int userviewX = (int) main.UserView.userviewX();
 		int userviewY = (int) main.UserView.userviewY();
-		int verschiebungX = (int) ((main.UserView.userviewX() - Math.round(main.UserView.userviewX())) * 32);
-		int verschiebungY = (int) ((main.UserView.userviewY() - Math.round(main.UserView.userviewY())) * 32);
+		verschiebungX = (int) ((main.UserView.userviewX() - Math.round(main.UserView.userviewX())) * 32);
+		verschiebungY = (int) ((main.UserView.userviewY() - Math.round(main.UserView.userviewY())) * 32);
 		
 		
 		
