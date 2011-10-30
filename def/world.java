@@ -26,7 +26,7 @@ public class world
 			{
 				INT  = Integer.parseInt(s.next());
 			
-				if (INT == 0)
+				if (INT == -1)
 				{
 					count ++;
 				

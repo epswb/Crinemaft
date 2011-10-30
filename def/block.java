@@ -4,10 +4,6 @@ import java.awt.Image;
 
 public class block
 {
-	public block()
-	{
-		
-	}
 	
 	public Image getBlock(int blockID)
 	{
@@ -101,91 +97,95 @@ public class block
 	
 	public static int sky()
 	{
-		return 1;
+		return 0;
 	}
 	public static int dirt()
 	{
-		return 2;
+		return 1;
 	}
 	public static int sand()
 	{
-		return 3;
+		return 2;
 	}
 	public static int stone()
 	{
-		return 4;
+		return 3;
 	}
 	public static int wood()
 	{
-		return 5;
+		return 4;
 	}
 	public static int leaf()
 	{
-		return 6;
+		return 5;
 	}
 	public static int flower()
 	{
-		return 7;
+		return 6;
 	}
 	public static int deepdirt()
 	{
-		return 8;
+		return 7;
 	}
 	public static int water()
 	{
-		return 9;
+		return 8;
 	}
 	public static int sandstone()
 	{
-		return 10;
+		return 9;
 	}
 	public static int gravel()
 	{
-		return 11;
+		return 10;
 	}
 	public static int coal()
 	{
-		return 12;
+		return 11;
 	}
 	public static int iron()
 	{
-		return 13;
+		return 12;
 	}
 	public static int gold()
 	{
-		return 14;
+		return 13;
 	}
 	public static int diamond()
 	{
-		return 15;
+		return 14;
 	}
 	public static int lapislazuli()
 	{
-		return 16;
+		return 15;
 	}
 	public static int redstone()
 	{
-		return 17;
+		return 16;
 	}
 	public static int dungeon()
 	{
-		return 18;
+		return 17;
 	}
 	public static int lava()
 	{
-		return 19;
+		return 18;
 	}
 	public static int bedrock()
 	{
-		return 20;
+		return 19;
 	}
 	
 	
 	public static boolean BlockwillCollide(int blockID)
 	{
-		if (blockID == 1)
+		if (blockID == 0)
 		{
 			return false;
+		}
+		if (blockID == 1)
+		{
+			return true;
 		}
 		if (blockID == 2)
 		{
@@ -197,7 +197,7 @@ public class block
 		}
 		if (blockID == 4)
 		{
-			return true;
+			return false;
 		}
 		if (blockID == 5)
 		{
@@ -209,15 +209,15 @@ public class block
 		}
 		if (blockID == 7)
 		{
-			return false;
+			return true;
 		}
 		if (blockID == 8)
 		{
-			return true;
+			return false;
 		}
 		if (blockID == 9)
 		{
-			return false;
+			return true;
 		}
 		if (blockID == 10)
 		{
@@ -249,17 +249,13 @@ public class block
 		}
 		if (blockID == 17)
 		{
-			return true;
+			return false;
 		}
 		if (blockID == 18)
 		{
 			return false;
 		}
 		if (blockID == 19)
-		{
-			return false;
-		}
-		if (blockID == 20)
 		{
 			return true;
 		}
@@ -273,17 +269,21 @@ public class block
 	
 	public static boolean BlockGravity(int blockID)
 	{
+		if (blockID == 0)
+		{
+			return false;
+		}
 		if (blockID == 1)
 		{
 			return false;
 		}
 		if (blockID == 2)
 		{
-			return false;
+			return true;
 		}
 		if (blockID == 3)
 		{
-			return true;
+			return false;
 		}
 		if (blockID == 4)
 		{
@@ -311,11 +311,11 @@ public class block
 		}
 		if (blockID == 10)
 		{
-			return false;
+			return true;
 		}
 		if (blockID == 11)
 		{
-			return true;
+			return false;
 		}
 		if (blockID == 12)
 		{
@@ -346,10 +346,6 @@ public class block
 			return false;
 		}
 		if (blockID == 19)
-		{
-			return false;
-		}
-		if (blockID == 20)
 		{
 			return false;
 		}
@@ -363,6 +359,10 @@ public class block
 	
 	public static boolean BlockLiquid(int blockID)
 	{
+		if (blockID == 0)
+		{
+			return false;
+		}
 		if (blockID == 1)
 		{
 			return false;
@@ -393,11 +393,11 @@ public class block
 		}
 		if (blockID == 8)
 		{
-			return false;
+			return true;
 		}
 		if (blockID == 9)
 		{
-			return true;
+			return false;
 		}
 		if (blockID == 10)
 		{
@@ -433,13 +433,9 @@ public class block
 		}
 		if (blockID == 18)
 		{
-			return false;
-		}
-		if (blockID == 19)
-		{
 			return true;
 		}
-		if (blockID == 20)
+		if (blockID == 19)
 		{
 			return false;
 		}

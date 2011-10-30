@@ -84,17 +84,17 @@ class physics
 						 
 						 skycounter++;
 					 }
-					 if (block.BlockwillCollide(main.World.get(i - 1, o)) == false && main.World.get(i - 1, o) != block.dungeon())
+					 if (block.BlockwillCollide(main.World.get(i + 1, o)) == false && main.World.get(i + 1, o) != block.dungeon())
 					 {
 						 
 						 skycounter++;
 					 }
-					 if (block.BlockwillCollide(main.World.get(i - 1, o)) == false && main.World.get(i - 1, o) != block.dungeon())
+					 if (block.BlockwillCollide(main.World.get(i, o - 1)) == false && main.World.get(i, o - 1) != block.dungeon())
 					 {
 						 
 						 skycounter++;
 					 }
-					 if (block.BlockwillCollide(main.World.get(i - 1, o)) == false && main.World.get(i - 1, o) != block.dungeon())
+					 if (block.BlockwillCollide(main.World.get(i, o + 1)) == false && main.World.get(i, o + 1) != block.dungeon())
 					 {
 						 
 						 skycounter++;

@@ -1,6 +1,5 @@
 package def;
 
-
 class Item
 {
 	public int blockID, anzahl, invPos;

@@ -50,7 +50,7 @@ class MiningHandler
 			
 			if (differenzX <= 3 && differenzY <= 3 && miningAlready == false)
 			{
-				m = new Mining(WorkingBlockX, WorkingBlockY, 10);
+				m = new Mining(WorkingBlockX, WorkingBlockY, 100);
 				miningAlready = true;
 			}
 		}
@@ -119,6 +119,24 @@ class MiningHandler
 			else if (m.stimmtNochAlles((int) (main.PK.MouseX / 32 + main.UserView.X), (int) (main.PK.MouseY / 32 + main.UserView.Y)) == true && main.PK.leftmouse == true)
 			{
 				m.nextStep();
+				
+				if (main.Player.armstate == 4)
+				{
+					main.Player.armGoesUp = false;
+				}
+				else if (main.Player.armstate == 0)
+				{
+					main.Player.armGoesUp = true;
+				}
+				
+				if (main.Player.armGoesUp == false)
+				{
+					main.Player.armstate--;
+				}
+				else
+				{
+					main.Player.armstate++;
+				}
 			}
 			
 			else
@@ -144,7 +162,6 @@ class MiningHandler
 			main.World.set(bx, by-1, block.sky());
 		}
 		main.World.set(bx, by, block.dungeon());
-
 	}
 }
 

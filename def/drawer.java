@@ -159,26 +159,123 @@ public class drawer
 	
 	public void drawManArm(boolean manWalkingLeft, int actImg, Graphics g)
 	{
-		if (main.Player.armstate == 0)
+		if (manWalkingLeft == false)
 		{
-			g.drawImage(main.IS.manarm0, main.Player.posX+10, main.Player.posY+35, 13, 30, null);
+			if (main.Player.armstate == 0)
+			{
+				if (actImg == 0)
+				{
+					g.drawImage(main.IS.manarm0, main.Player.posX+10, main.Player.posY+30, 13, 30, null);
+				}
+				else if (actImg == 1)
+				{
+					g.drawImage(main.IS.manarm0, main.Player.posX+8, main.Player.posY+30, 13, 30, null);
+				}
+			}
+			else if (main.Player.armstate == 1)
+			{
+				if (actImg == 0)
+				{
+					g.drawImage(main.IS.manarm1, main.Player.posX+11, main.Player.posY+30, 27, 38, null);
+				}
+				else if (actImg == 1)
+				{
+					g.drawImage(main.IS.manarm1, main.Player.posX+9, main.Player.posY+30, 27, 38, null);
+				}
+			}
+			else if (main.Player.armstate == 2)
+			{
+				if (actImg == 0)
+				{
+					g.drawImage(main.IS.manarm2, main.Player.posX+12, main.Player.posY+30, 36, 36, null);
+				}
+				else if (actImg == 1)
+				{
+					g.drawImage(main.IS.manarm2, main.Player.posX+10, main.Player.posY+30, 36, 36, null);
+				}
+			}
+			else if (main.Player.armstate == 3)
+			{
+				if (actImg == 0)
+				{
+					g.drawImage(main.IS.manarm3, main.Player.posX+13, main.Player.posY+30, 38, 27, null);
+				}
+				else if (actImg == 1)
+				{
+					g.drawImage(main.IS.manarm3, main.Player.posX+11, main.Player.posY+30, 38, 27, null);
+				}
+			}
+			else if (main.Player.armstate == 4)
+			{
+				if (actImg == 0)
+				{
+					g.drawImage(main.IS.manarm4, main.Player.posX+14, main.Player.posY+30, 35, 18, null);
+				}
+				else if (actImg == 1)
+				{
+					g.drawImage(main.IS.manarm4, main.Player.posX+12, main.Player.posY+30, 35, 18, null);
+				}
+			}
 		}
-		else if (main.Player.armstate == 1)
+		else
 		{
-			
+			if (main.Player.armstate == 0)
+			{
+				if (actImg == 0)
+				{
+					g.drawImage(main.IS.manarm0, main.Player.posX+22, main.Player.posY+35, -13, 30, null);
+				}
+				else if (actImg == 1)
+				{
+					g.drawImage(main.IS.manarm0, main.Player.posX+24, main.Player.posY+35, -13, 30, null);
+				}
+			}
+			else if (main.Player.armstate == 1)
+			{
+				if (actImg == 0)
+				{
+					g.drawImage(main.IS.manarm1, main.Player.posX+22, main.Player.posY+35, -27, 38, null);
+				}
+				else if (actImg == 1)
+				{
+					g.drawImage(main.IS.manarm1, main.Player.posX+24, main.Player.posY+35, -27, 38, null);
+				}
+			}
+			else if (main.Player.armstate == 2)
+			{
+				if (actImg == 0)
+				{
+					g.drawImage(main.IS.manarm2, main.Player.posX+22, main.Player.posY+35, -36, 36, null);
+				}
+				else if (actImg == 1)
+				{
+					g.drawImage(main.IS.manarm2, main.Player.posX+24, main.Player.posY+35, -36, 36, null);
+				}
+			}
+			else if (main.Player.armstate == 3)
+			{
+				if (actImg == 0)
+				{
+					g.drawImage(main.IS.manarm3, main.Player.posX+22, main.Player.posY+35, -38, 27, null);
+				}
+				else if (actImg == 1)
+				{
+					g.drawImage(main.IS.manarm3, main.Player.posX+24, main.Player.posY+35, -38, 27, null);
+				}
+			}
+			else if (main.Player.armstate == 4)
+			{
+				if (actImg == 0)
+				{
+					g.drawImage(main.IS.manarm4, main.Player.posX+22, main.Player.posY+35, -35, 18, null);
+				}
+				else if (actImg == 1)
+				{
+					g.drawImage(main.IS.manarm4, main.Player.posX+24, main.Player.posY+35, -35, 18, null);
+				}
+			}
 		}
-		else if (main.Player.armstate == 2)
-		{
-			
-		}
-		else if (main.Player.armstate == 3)
-		{
-			
-		}
-		else if (main.Player.armstate == 4)
-		{
-			
-		}
+		
 	}
-}
 
+}

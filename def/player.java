@@ -10,6 +10,7 @@ class player
 	public float blockposX = 11, blockposY = 13;
 	public int armstate = 0;
 	public int leben = 10;
+	public boolean armGoesUp = true;
 	
 	
 	public player(int posx, int posy)

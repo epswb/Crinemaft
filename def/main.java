@@ -317,7 +317,7 @@ public class main extends Applet implements Runnable
 					inv.BlockAblegen(e.getX(), e.getY());
 				}
 			}
-			
+			main.Player.armstate = 0;
 		}
 		
 	}
