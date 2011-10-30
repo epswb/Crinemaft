@@ -81,63 +81,69 @@ class Inventory
 	
 	public void BlockNehmen(int x, int y)
 	{
-		x -= 222;
-		y -= 457;
-		
-		x = (x / 50) - (x % 1);
-		y = (y / 50) - (y % 1);
-		
-		
-		for (int i = 0; i < main.inv.inventory.size(); i++)
+		if (x > 150 && x < 594 && y > 345 && y < 489)
 		{
-			if (main.inv.inventory.get(i).invPos == x+y*9+9)
+			x -= 147;
+			y -= 347;
+			
+			x = (x / 50) - (x % 1);
+			y = (y / 50) - (y % 1);
+			
+			
+			for (int i = 0; i < main.inv.inventory.size(); i++)
 			{
-				movingItem = new Item(main.inv.inventory.get(i).blockID, main.inv.inventory.get(i).anzahl, main.inv.inventory.get(i).invPos);
-				main.inv.inventory.remove(i);
-				main.PK.clickedaufgenommen = true;
+				if (main.inv.inventory.get(i).invPos == x+y*9+9)
+				{
+					movingItem = new Item(main.inv.inventory.get(i).blockID, main.inv.inventory.get(i).anzahl, main.inv.inventory.get(i).invPos);
+					main.inv.inventory.remove(i);
+					main.PK.clickedaufgenommen = true;
+				}
 			}
 		}
 	}
 	
 	public void BlockAblegen(int x, int y)
 	{
-		x -= 222;
-		y -= 457;
-		
-		x = (x / 50) - (x % 1);
-		y = (y / 50) - (y % 1);
-		
-		boolean geändert = false;
-		
-		a:for (int i = 0; i < main.inv.inventory.size(); i++)
+		if (x > 150 && x < 594 && y > 345 && y < 489)
 		{
-			if (movingItem != null && main.inv.inventory.get(i).invPos == x+y*9+9)
-			{
-				main.PK.clickedaufgenommen = true;
-				Item übergang = new Item(main.inv.inventory.get(i).blockID, main.inv.inventory.get(i).anzahl, main.inv.inventory.get(i).invPos);
-				main.inv.inventory.remove(i);
-				movingItem.invPos = x+y*9+9;
-				Item newItem = new Item(movingItem.blockID, movingItem.anzahl, movingItem.invPos);
-				main.inv.inventory.add(newItem);
-				movingItem = new Item(übergang.blockID, übergang.anzahl, übergang.invPos);
-				geändert = true;
-				break a;
-			}
+			x -= 147;
+			y -= 347;
 			
-		}
-		
-		if (geändert == false)
-		{
+			x = (x / 50) - (x % 1);
+			y = (y / 50) - (y % 1);
+			
+			boolean geändert = false;
+			
 			a:for (int i = 0; i < main.inv.inventory.size(); i++)
 			{
-				if (movingItem != null && main.inv.inventory.get(i).invPos != x+y*9+9)
+				if (movingItem != null && main.inv.inventory.get(i).invPos == x+y*9+9)
 				{
-					main.inv.movingItem.invPos = x+y*9+9;
-					main.inv.inventory.add(movingItem);
-					movingItem = null;
-					main.PK.clickedaufgenommen = false;
+					main.PK.clickedaufgenommen = true;
+					Item übergang = new Item(main.inv.inventory.get(i).blockID, main.inv.inventory.get(i).anzahl, main.inv.inventory.get(i).invPos);
+					main.inv.inventory.remove(i);
+					movingItem.invPos = x+y*9+9;
+					Item newItem = new Item(movingItem.blockID, movingItem.anzahl, movingItem.invPos);
+					main.inv.inventory.add(newItem);
+					movingItem = new Item(übergang.blockID, übergang.anzahl, übergang.invPos);
+					geändert = true;
+					break a;
 				}
 				
+			}
+			
+			if (geändert == false)
+			{
+				a:for (int i = 0; i < main.inv.inventory.size(); i++)
+				{
+					if (movingItem != null && main.inv.inventory.get(i).invPos != x+y*9+9)
+					{
+						main.inv.movingItem.invPos = x+y*9+9;
+						main.inv.inventory.add(movingItem);
+						movingItem = null;
+						main.PK.clickedaufgenommen = false;
+					}
+					
+				}
 			}
 		}
 	}
