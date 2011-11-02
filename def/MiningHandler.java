@@ -1,5 +1,7 @@
 package def;
 
+import sound.SoundEffect;
+
 
 class MiningHandler
 {
@@ -20,15 +22,15 @@ class MiningHandler
 			handleRM();
 		}
 		
-		else if (main.PK.LeftMouse() == true && main.inv.inventoryMode == true)
-		{
-			
-		}
-		
-		else if (main.PK.LeftMouse() == true && main.inv.inventoryMode == true)
-		{
-			
-		}
+//		else if (main.PK.LeftMouse() == true && main.inv.inventoryMode == true)
+//		{
+//			
+//		}
+//		
+//		else if (main.PK.RightMouse() == true && main.inv.inventoryMode == true)
+//		{
+//			
+//		}
 		
 		handleMining();
 	}
@@ -75,6 +77,7 @@ class MiningHandler
 						{
 							main.World.set(WorkingBlockX, WorkingBlockY, main.inv.ausgewählterBlock());
 							main.inv.inventory.get(main.hud.LeisteZeiger).anzahl--;
+							main.soundmanager.placingBlockEffect(main.inv.ausgewählterBlock());
 						}
 					}
 				}
@@ -87,6 +90,7 @@ class MiningHandler
 						{
 							main.World.set(WorkingBlockX, WorkingBlockY, main.inv.ausgewählterBlock());
 							main.inv.inventory.get(main.hud.LeisteZeiger).anzahl--;
+							main.soundmanager.placingBlockEffect(main.inv.ausgewählterBlock());
 						}
 					}
 				}
@@ -99,6 +103,7 @@ class MiningHandler
 						{
 							main.World.set(WorkingBlockX, WorkingBlockY, main.inv.ausgewählterBlock());
 							main.inv.inventory.get(main.hud.LeisteZeiger).anzahl--;
+							main.soundmanager.placingBlockEffect(main.inv.ausgewählterBlock());
 						}
 					}
 				}
@@ -161,7 +166,36 @@ class MiningHandler
 		{
 			main.World.set(bx, by-1, block.sky());
 		}
+		
+		int detail = -1;
+		int bID = main.World.get(bx, by);
+		
+		if (bID == block.dirt() || bID == block.deepdirt())
+		{
+			detail = SoundEffect.SE_DETAIL_GRASS;
+		}
+		else if (bID == block.wood())
+		{
+			detail = SoundEffect.SE_DETAIL_WOOD;
+		}
+		else if (bID == block.stone())
+		{
+			detail = SoundEffect.SE_DETAIL_STONE;
+		}
+		else if (bID == block.gravel())
+		{
+			detail = SoundEffect.SE_DETAIL_GRAVEL;
+		}
+		
+		if (detail > -1)
+		{
+			main.soundmanager.playStepEffect(new SoundEffect(
+					SoundEffect.SE_TYPE_MATERIAL, detail, (int)(Math.random()*2)));
+		}
+				
 		main.World.set(bx, by, block.dungeon());
+		
+		
 	}
 }
 

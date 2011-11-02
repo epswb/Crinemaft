@@ -95,83 +95,83 @@ public class block
 		
 	}
 	
-	public static int sky()
+	public final static int sky()
 	{
 		return 0;
 	}
-	public static int dirt()
+	public final static int dirt()
 	{
 		return 1;
 	}
-	public static int sand()
+	public final static int sand()
 	{
 		return 2;
 	}
-	public static int stone()
+	public final static int stone()
 	{
 		return 3;
 	}
-	public static int wood()
+	public final static int wood()
 	{
 		return 4;
 	}
-	public static int leaf()
+	public final static int leaf()
 	{
 		return 5;
 	}
-	public static int flower()
+	public final static int flower()
 	{
 		return 6;
 	}
-	public static int deepdirt()
+	public final static int deepdirt()
 	{
 		return 7;
 	}
-	public static int water()
+	public final static int water()
 	{
 		return 8;
 	}
-	public static int sandstone()
+	public final static int sandstone()
 	{
 		return 9;
 	}
-	public static int gravel()
+	public final static int gravel()
 	{
 		return 10;
 	}
-	public static int coal()
+	public final static int coal()
 	{
 		return 11;
 	}
-	public static int iron()
+	public final static int iron()
 	{
 		return 12;
 	}
-	public static int gold()
+	public final static int gold()
 	{
 		return 13;
 	}
-	public static int diamond()
+	public final static int diamond()
 	{
 		return 14;
 	}
-	public static int lapislazuli()
+	public final static int lapislazuli()
 	{
 		return 15;
 	}
-	public static int redstone()
+	public final static int redstone()
 	{
 		return 16;
 	}
-	public static int dungeon()
+	public final static int dungeon()
 	{
 		return 17;
 	}
-	public static int lava()
+	public final static int lava()
 	{
 		return 18;
 	}
-	public static int bedrock()
+	public final static int bedrock()
 	{
 		return 19;
 	}

@@ -11,8 +11,12 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.awt.event.MouseWheelEvent;
 import java.awt.event.MouseWheelListener;
+
 import javax.swing.JFrame;
+
 import light.Light;
+import sound.SoundManager;
+import sound.SoundStorer;
 
 
 public class main extends Applet implements Runnable
@@ -32,6 +36,8 @@ public class main extends Applet implements Runnable
 	public static HUD hud;
 	public static Inventory inv;
 	public static Light light;
+	public static SoundManager soundmanager;
+	public static SoundStorer soundstorer;
 	
 	
 	public JFrame frame;
@@ -52,6 +58,9 @@ public class main extends Applet implements Runnable
 		mininghandler = new MiningHandler();
 		inv = new Inventory();
 		light = new Light();
+		soundstorer = new SoundStorer();
+		soundmanager = new SoundManager(this);
+		
 		
 		frame = new JFrame("Crinemaft 1.0.0");
 		frame.setSize(750, 750);
@@ -75,7 +84,7 @@ public class main extends Applet implements Runnable
 	{
 //		World.loadWorld("C:\\Crinemaft\\worlds\\world001.txt");
 		World.loadWorld("C:\\Crinemaft\\map.txt");
-		
+		soundmanager.manageSound();
 	}
 
 	
@@ -90,6 +99,7 @@ public class main extends Applet implements Runnable
 			Physics.doGravity();
 			mininghandler.handle();
 			Physics.changes();
+			soundmanager.manageSound();
 //			
 //			---------------------------------------------------------------------
 //			
