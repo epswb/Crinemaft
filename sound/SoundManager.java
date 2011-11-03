@@ -41,10 +41,9 @@ public class SoundManager
 	public void startNewMusicClip()
 	{
 		musicplayer.playSound();
-		System.out.println(actualMusic);
 	}
 	
-	public void placingBlockEffect(int blockID)
+	public void BlockEffect(int blockID)
 	{
 		int detail = -1;
 		

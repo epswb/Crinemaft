@@ -77,7 +77,7 @@ class MiningHandler
 						{
 							main.World.set(WorkingBlockX, WorkingBlockY, main.inv.ausgewählterBlock());
 							main.inv.inventory.get(main.hud.LeisteZeiger).anzahl--;
-							main.soundmanager.placingBlockEffect(main.inv.ausgewählterBlock());
+							main.soundmanager.BlockEffect(main.inv.ausgewählterBlock());
 						}
 					}
 				}
@@ -90,7 +90,7 @@ class MiningHandler
 						{
 							main.World.set(WorkingBlockX, WorkingBlockY, main.inv.ausgewählterBlock());
 							main.inv.inventory.get(main.hud.LeisteZeiger).anzahl--;
-							main.soundmanager.placingBlockEffect(main.inv.ausgewählterBlock());
+							main.soundmanager.BlockEffect(main.inv.ausgewählterBlock());
 						}
 					}
 				}
@@ -103,7 +103,7 @@ class MiningHandler
 						{
 							main.World.set(WorkingBlockX, WorkingBlockY, main.inv.ausgewählterBlock());
 							main.inv.inventory.get(main.hud.LeisteZeiger).anzahl--;
-							main.soundmanager.placingBlockEffect(main.inv.ausgewählterBlock());
+							main.soundmanager.BlockEffect(main.inv.ausgewählterBlock());
 						}
 					}
 				}

@@ -44,6 +44,11 @@ class player
 			{
 				main.Player.WalkState++;
 			}
+			
+			if ((main.Player.blockposX % 1) == 0 && (Math.random()*5) > 4)
+			{
+				main.soundmanager.BlockEffect(main.World.get((int) blockposX, (int) blockposY));
+			}
 		}
 		
 		else if (main.Physics.bigstep == true && main.Physics.walkingblocked == false)
@@ -78,6 +83,11 @@ class player
 			else
 			{
 				main.Player.WalkState++;
+			}
+			
+			if ((main.Player.blockposX % 1) == 0 && (Math.random()*5) > 4)
+			{
+				main.soundmanager.BlockEffect(main.World.get((int) blockposX, (int) blockposY));
 			}
 		}
 		

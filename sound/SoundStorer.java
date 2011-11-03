@@ -21,7 +21,6 @@ public class SoundStorer
 	
 	public Sound getStepEffect(int detail, int number)
 	{
-		System.out.println(detail + " " + number);
 		if (stepEffects[detail][number] != null)
 		{
 			return stepEffects[detail][number];
